@@ -35,10 +35,10 @@
 	   <div class="panel-body">
 	       <form action="#" th:action="@{__${#httpServletRequest.requestURI}__}" th:object="${commentDto}" method="post">
                 <div class="row form-group">
-                    <textarea th:field="*{comment}" class="form-control" rows="10" style="resize: none" placeholder="回复"></textarea>
+                    <textarea th:field="*{comment}" class="form-control" rows="10" style="resize: none" placeholder="Reply"></textarea>
 			    </div>
 			    <div class="row form-group pull-right">
-		            <input class="btn btn-primary text-right" type="submit" value="发表"/>
+		            <input class="btn btn-primary text-right" type="submit" value="Post"/>
 			    </div>
 			</form>
 	   </div>

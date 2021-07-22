@@ -17,11 +17,11 @@
 	                        <div class="container-fluid">
 	                            <form action="#" th:action="@{/new}" th:object="${postDto}" method="post">
 	                                <div class="row form-group">
-	                                    <input th:field="*{title}" type="text" class="form-control" placeholder="标题" />
+	                                    <input th:field="*{title}" type="text" class="form-control" placeholder="Title" />
 	                                    <span class="label label-warning" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title Error</span>
 	                                </div>
 	                                <div class="row form-group">
-	                                    <textarea th:field="*{body}" class="form-control" rows="10" style="resize: vertical" placeholder="正文"></textarea>
+	                                    <textarea th:field="*{body}" class="form-control" rows="10" style="resize: vertical" placeholder="Text"></textarea>
 	                                    <span class="label label-warning" th:if="${#fields.hasErrors('body')}" th:errors="*{body}">Body Error</span>
 	                                </div>
 	                                <div class="row form-group">
@@ -35,7 +35,7 @@
 	                                    </span>
 		                                <span class="pull-right">
 		                                    <input hidden="true" type="text" th:field="*{category}"/>
-			                                <input class="btn btn-primary text-right" type="submit" value="发表" />
+			                                <input class="btn btn-primary text-right" type="submit" value="Submit" />
 		                                </span>
 	                                </div>
 	                            </form>

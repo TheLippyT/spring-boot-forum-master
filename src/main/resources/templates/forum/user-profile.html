@@ -45,7 +45,7 @@
 			                            <a class="post-tag"
 			                                    th:href="@{/category/{categoryName}(categoryName=${post.category.name})}"
 			                                    th:text="${post.category.displayName}"></a>
-			                            <span class="post-date" th:text="${'发布于 ' + post.dateFormat()}"></span>
+			                            <span class="post-date" th:text="${'posted on ' + post.dateFormat()}"></span>
 			                            <span class="post-date" th:if="${post.hitCount > 0}" th:text="${post.hitCount + ' 次点击'}"></span>
 			                            <span class="post-date" th:if="${post.commentCount > 0}" th:text="${post.commentCount + ' 回复'}"></span>
 			                        </div>
