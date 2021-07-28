@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <body>
 <div id="comment-list" th:fragment="comments">
 
@@ -8,12 +8,12 @@
 		<ul class="list-group list-custom-corner">
 		    <li class="list-group-item side-borderless last-border" th:each="comment, currNum : ${comments}">
 				<div class="media">
-					<div class="media-left">
-						<a th:href="@{/user/{username}(username=${comment.user.id})}">
-							<img class="media-object img-rounded" th:src="${'../' + comment.user.avatarLocation}"
-							alt="profile_pic" width="50" height="50">
-						</a>
-					</div>
+<!--					<div class="media-left">-->
+<!--						<a th:href="@{/user/{username}(username=${comment.user.id})}">-->
+<!--							<img class="media-object img-rounded" th:src="${'../' + comment.user.avatarLocation}"-->
+<!--							alt="profile_pic" width="50" height="50">-->
+<!--						</a>-->
+<!--					</div>-->
 					<div class="media-body">
 						<div class="media-heading">
 							<a th:href="@{/user/{username}(username=${comment.user.id})}"

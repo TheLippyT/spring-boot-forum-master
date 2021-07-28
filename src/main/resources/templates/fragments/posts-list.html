@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
 <body>
 	<div class="panel panel-default" th:fragment="posts">
 	
@@ -21,11 +21,11 @@
             <ul class="list-group list-custom-corner">
                 <li class="list-group-item side-borderless last-border" th:each="post:${posts}">
                     <div class="media">
-                        <div class="media-left media-middle">
-		                    <a th:href="@{/user/{userId}(userId=${post.user.id})}">
-		                    <img class="media-object img-rounded" th:src="${'../' + post.user.avatarLocation}" 
-		                    	alt="profile_pic" width="50px" height="50px"></a>
-		                </div>
+<!--                        <div class="media-left media-middle">-->
+<!--		                    <a th:href="@{/user/{userId}(userId=${post.user.id})}">-->
+<!--		                    <img class="media-object img-rounded" th:src="${'../' + post.user.avatarLocation}" -->
+<!--		                    	alt="profile_pic" width="50px" height="50px"></a>-->
+<!--		                </div>-->
 		                <div class="media-body">
                             <div class="media-heading">
                                 <a class="post-title" th:href="@{/post/{postId}(postId=${post.id})}" th:text="${post.title}">title</a>
@@ -36,7 +36,7 @@
                             <a class="post-user"
                                     th:href="@{/user/{userId}(userId=${post.user.id})}"
                                     th:text="${post.user.username}"></a>
-                            <span class="post-date" th:text="${'发布于 ' + post.dateFormat()}"></span>
+                            <span class="post-date" th:text="${'posted on ' + post.dateFormat()}"></span>
                         </div>
                         <div class="media-right media-middle">
                             <div th:if="${post.commentCount > 0}" th:text="${post.commentCount}" class="badge"></div>
