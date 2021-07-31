@@ -17,14 +17,12 @@
 					<div th:replace="fragments/posts-list :: posts"></div>
 				</div>
 				<div class="col-md-4">
-				    <a class="panel btn btn-default quick-post-button" href="/new"
+				    <a class="panel btn btn-primary quick-post-button" href="/new"
 				        th:if="${pageType} == 'homePage'" sec:authorize="isAuthenticated()">
-				        <span class="middle-centered">Quickly post</span>
+				        <span class="middle-centered">New Post</span>
                     </a>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							Message 1</div>
-						<div class="panel-body">Message content 1</div>
+					<div th:replace="fragments/ad-space">
+
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">Message 2</div>

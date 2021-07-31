@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <body>
-	<div class="navbar navbar-default navbar-static-top" th:fragment="header">
+	<div class="navbar navbar-light navbar-static-top" th:fragment="header">
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="/">HOME</a>
@@ -19,16 +19,16 @@
 			</form>
 
 			<ul class="nav navbar-nav navbar-right" sec:authorize="isAnonymous()">
-				<li class="active"><a href="/">Home page</a></li>
-				<li><a href="../user/registration">Register</a></li>
-				<li><a href="../user/login">log in</a></li>
+				<li class="active btn-primary"><a href="/">Home page</a></li>
+				<li class="btn-primary"><a href="../user/registration">Register</a></li>
+				<li class="btn-primary"><a href="../user/login">log in</a></li>
 			</ul>
 			
 			<ul class="nav navbar-nav navbar-right" sec:authorize="isAuthenticated()">
-                <li><a href="#" sec:authentication="name"></a></li>
-                <li><a href="../user/settings">Profile</a></li>
-                <li><a href="../dashboard" sec:authorize="hasAuthority('ADMIN')">management</a></li>
-                <li><a th:href="@{/logout}">Sign out</a></li>
+                <li class="btn-primary"><a href="#" sec:authentication="name"></a></li>
+                <li class="btn-primary"><a href="../user/settings">Profile</a></li>
+                <li class="btn-primary"><a href="../dashboard" sec:authorize="hasAuthority('ADMIN')">management</a></li>
+                <li class="btn-primary"><a th:href="@{/logout}">Sign out</a></li>
 			</ul>
 		</div>
 	</div>
