@@ -31,15 +31,15 @@
 				                <li role="presentation" th:class="${activeTab == 'posts'} ? 'active' : ''">
 				                    <a href="?tab=posts">Post</a>
 				                </li>
-								<li role="presentation" th:class="${activeTab == 'users'} ? 'active' : ''">
-								    <a href="?tab=users">user</a>
-								</li>
+<!--								<li role="presentation" th:class="${activeTab == 'users'} ? 'active' : ''">-->
+<!--								    <a href="?tab=users">user</a>-->
+<!--								</li>-->
 								<li role="presentation" th:class="${activeTab == 'categories'} ? 'active' : ''">
 								    <a href="?tab=categories">Categories</a>
 								</li>
-								<li role="presentation" th:class="${activeTab == 'settings'} ? 'active' : ''">
-								    <a href="?tab=settings">Set up</a>
-								</li>
+<!--								<li role="presentation" th:class="${activeTab == 'settings'} ? 'active' : ''">-->
+<!--								    <a href="?tab=settings">Set up</a>-->
+<!--								</li>-->
 			                </ul>
 	                    </div>
 	                    <div class="col-md-10">
@@ -47,7 +47,7 @@
                             <!-- include all dash board fragments -->                            
                             <div th:replace="fragments/dashboard-posts :: posts"></div>
                             <div th:replace="fragments/dashboard-stats :: stats"></div>
-                            <div th:replace="fragments/dashboard-users :: users"></div>
+<!--                            <div th:replace="fragments/dashboard-users :: users"></div>-->
                             <div th:replace="fragments/dashboard-categories :: categories"></div>
                             
                             <!-- post edit modal -->                            
@@ -67,4 +67,5 @@
     </div>
     <footer th:replace="fragments/footer :: footer"></footer>
 </body>
+
 </html>

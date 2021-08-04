@@ -28,7 +28,7 @@ public class CategoryServiceImpl implements CategoryService {
 	public Map<String, Object> getNewPostPageWithCategoryName(String categoryName) {
 		Map<String, Object> attributes = new HashMap<>();
 		Category category = this.categoryMapper.findByName(categoryName);
-		attributes.put("title", PageMessage.MESSAGE_NEW_POST_CN);
+		attributes.put("title", PageMessage.MESSAGE_NEW_POST_EN);
 		PostDto newPostForm = new PostDto();
 		newPostForm.setCategory(category.getName());
 		attributes.put("postDto", newPostForm);
@@ -40,7 +40,7 @@ public class CategoryServiceImpl implements CategoryService {
 	public Map<String, Object> getNewPostPageWithCategorySelect() {
 		List<Category> categories = this.categoryMapper.findAll();
 		Map<String, Object> attributes = new HashMap<>();
-		attributes.put("title", PageMessage.MESSAGE_NEW_POST_CN);
+		attributes.put("title", PageMessage.MESSAGE_NEW_POST_EN);
 		attributes.put("categories", categories);
 		attributes.put("postDto", new PostDto());
 		attributes.put("isQuickNewPost", true);

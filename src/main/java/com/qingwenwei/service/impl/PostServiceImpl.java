@@ -150,7 +150,7 @@ public class PostServiceImpl implements PostService {
 		List<Category> categories = this.categoryMapper.findAll();
 		// construct attributes map
 		Map<String, Object> attributes = new HashMap<>();
-		attributes.put("title", PageMessage.MESSAGE_HOMEPAGE_TITLE_CN);
+		attributes.put("title", PageMessage.MESSAGE_HOMEPAGE_TITLE_EN);
 		attributes.put("categories", categories);
 		attributes.put("posts", postsPageInfo.getList());
 		attributes.put("pageNum", postsPageInfo.getPageNum());
@@ -173,7 +173,7 @@ public class PostServiceImpl implements PostService {
 		Category category = this.categoryMapper.findByName(categoryName);
 		// construct attributes map
 		Map<String, Object> attributes = new HashMap<>();
-		attributes.put("title", PageMessage.MESSAGE_HOMEPAGE_TITLE_CN);
+		attributes.put("title", PageMessage.MESSAGE_HOMEPAGE_TITLE_EN);
 		attributes.put("category", category);
 		attributes.put("categories", categories);
 		attributes.put("posts", postsPageInfo.getList());

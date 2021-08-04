@@ -21,7 +21,7 @@ public class RegistrationListener implements ApplicationListener<OnRegistrationC
 
 	private static final String VERIFICATION_EMAIL_FROM_ADDR = "springbootforum@163.com";
 
-	private static final String VERIFICATION_EMAIL_SUBJECT = "用户注册确认";
+	private static final String VERIFICATION_EMAIL_SUBJECT = "User registration confirmation";
 
 	private static final String CONFIRM_ENDPOINT = "registration-confirm";
 

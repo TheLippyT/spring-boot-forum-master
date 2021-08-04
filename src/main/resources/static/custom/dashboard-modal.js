@@ -63,10 +63,14 @@ $(document).ready(function() {
         var postTitle = $(this).data('post-title');
         var postUsername = $(this).data('post-username');
         var postDate = $(this).data('post-date');
-        $(".modal-body #postId").text("帖子ID: " + postId);
-        $(".modal-body #postUsername").text("发帖者：" + postUsername);
-        $(".modal-body #postDate").text("发帖日期：" + postDate);
-        $(".modal-body #postTitle").text("标题：" + postTitle);
+        $(".modal-body #postId").text("\n" + "Post id: " + postId);
+        $(".modal-body #postUsername").text("\n" +
+			"Poster：" + postUsername);
+        $(".modal-body #postDate").text("\n" +
+			"Fātiē rìqí\n" +
+			"Post date：" + postDate);
+        $(".modal-body #postTitle").text("\n" +
+			"title：" + postTitle);
         selectedPostId = postId;
         $("#postDeleteModal").modal();
     })
@@ -83,10 +87,16 @@ $(document).ready(function() {
 			url: "post/" + postId, 
 			type: "DELETE",
 			error: function(xhr, status) {
-					showMessageModal(false, "删除失败！", "删除帖子（ID：" + postId + "）失败。");
+					showMessageModal(false, "\n" +
+						"failed to delete！", "\n" +
+						"Delete post（ID：" + postId + "）\n" +
+						"fail. ");
 				},
 			success: function(result) {
-					showMessageModal(true, "删除成功！", "删除帖子（ID：" + postId + "）成功。");
+					showMessageModal(true, "\n" +
+						"successfully deleted！", "\n" +
+						"Delete post（ID：" + postId + "）\n" +
+						"success.");
 				}
 		});
 	}

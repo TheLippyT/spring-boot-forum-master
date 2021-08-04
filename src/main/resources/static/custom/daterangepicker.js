@@ -52,12 +52,12 @@ $(function() {
         startDate: start,
         endDate: end,
         ranges: {
-           '今天': [moment(), moment()],
-           '昨天': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-           '过去7天': [moment().subtract(6, 'days'), moment()],
-           '过去30天': [moment().subtract(29, 'days'), moment()],
-           '这个月': [moment().startOf('month'), moment().endOf('month')],
-           '上个月': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+           'today': [moment(), moment()],
+           'yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Past 7 days': [moment().subtract(6, 'days'), moment()],
+           'Last 30 days': [moment().subtract(29, 'days'), moment()],
+           'This month': [moment().startOf('month'), moment().endOf('month')],
+           'last month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         }
     });
     

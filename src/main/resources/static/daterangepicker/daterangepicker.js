@@ -69,10 +69,10 @@
             direction: 'ltr',
             format: moment.localeData().longDateFormat('L'),
             separator: ' - ',
-            applyLabel: '应用',
-            cancelLabel: '取消',
+            applyLabel: 'application',
+            cancelLabel: 'Cancel',
             weekLabel: 'W',
-            customRangeLabel: '自定义日期',
+            customRangeLabel: 'Custom date',
             daysOfWeek: moment.weekdaysMin(),
             monthNames: moment.monthsShort(),
             firstDay: moment.localeData().firstDayOfWeek()
